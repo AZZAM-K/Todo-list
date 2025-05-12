@@ -3,7 +3,7 @@
   "private": false,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://AZZAM-K.github.io/Todo-list",
+  "homepage": "https://azzam-k.github.io/Todo-list",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
