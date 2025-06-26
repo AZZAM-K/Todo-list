@@ -1,4 +1,7 @@
 import PropTypes from 'prop-types'
+import checkIcon from './assets/icon-check.svg'
+import deleteIcon from './assets/icon-cross.svg'
+
 function Todo({
   todo,
   theme,
@@ -23,9 +26,7 @@ function Todo({
             htmlFor={`todo-${todo.id}`}
             className={todo.completed ? 'checked' : ''}
           >
-            {todo.completed && (
-              <img src='src/assets/icon-check.svg' alt='Check icon' />
-            )}
+            {todo.completed && <img src={checkIcon} alt='Check icon' />}
           </label>
           <input
             type='checkbox'
@@ -36,7 +37,7 @@ function Todo({
           <span className={todo.completed ? 'completed' : ''}>{todo.task}</span>
         </div>
         <button onClick={() => onDelete(todo.id)}>
-          <img src='src/assets/icon-cross.svg' alt='Delete icon' />
+          <img src={deleteIcon} alt='Delete icon' />
         </button>
       </li>
       <hr />
