@@ -2,6 +2,9 @@ import { useState } from 'react'
 import CreateNewTodo from './CreateNewTodo'
 import TodoList from './TodoList'
 import './style.css'
+import sunIcon from './assets/icon-sun.svg'
+import moonIcon from './assets/icon-moon.svg'
+
 let nextId = 0
 function App() {
   const [todos, setTodos] = useState([])
@@ -49,7 +52,7 @@ function App() {
             }
           >
             <img
-              src={`src/assets/icon-${theme === 'dark' ? 'sun' : 'moon'}.svg`}
+              src={theme === 'dark' ? sunIcon : moonIcon}
               alt={`${theme === 'dark' ? 'sun' : 'moon'} icon`}
             />
           </button>
