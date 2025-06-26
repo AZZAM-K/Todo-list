@@ -1,14 +1,13 @@
 import PropTypes from 'prop-types'
 import { useState } from 'react'
+import checkIcon from './assets/icon-check.svg'
 function CreateNewTodo({ theme, onCreate }) {
   const [newTodo, setNewTodo] = useState('')
   const [isCompleted, setIsCompleted] = useState(false)
   return (
     <div className={`input input-${theme}`}>
       <label htmlFor='newTodo' className={isCompleted ? 'checked' : ''}>
-        {isCompleted && (
-          <img src='src/assets/icon-check.svg' alt='check icon' />
-        )}
+        {isCompleted && <img src={checkIcon} alt='check icon' />}
       </label>
       <input
         type='checkbox'
